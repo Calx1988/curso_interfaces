@@ -1,11 +1,14 @@
 package model.entities;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Contract {
     private Integer number;
     private Date date;
     private Double value;
+    private List<Installment> installments = new ArrayList<>();
 
     public Contract(){
     }
@@ -38,5 +41,9 @@ public class Contract {
 
     public void setValue(Double contractValue) {
         this.value = contractValue;
+    }
+
+    public List<Installment> getInstallments() {
+        return installments;
     }
 }
