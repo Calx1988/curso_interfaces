@@ -1,5 +1,6 @@
 package model.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Installment {
@@ -26,7 +27,16 @@ public class Installment {
         return value;
     }
 
+    @Override
+    public String toString() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        return sdf.format(dueDate) +
+                " - " + String.format("%.2f",value);
+    }
+
     public void setValue(Double value) {
         this.value = value;
+
+
     }
 }

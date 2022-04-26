@@ -8,7 +8,7 @@ public class PaypalPaymentService implements PaymentService{
         return value*PAYMENT_FEE;
     }
     @Override
-    public Double interestRate(double value, int month){
-        return (value*INTEREST_RATE) * month;
+    public Double interestRate(double value, int months){
+        return (value*INTEREST_RATE) * months;
     }
 }
